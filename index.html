@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>4° Passeio Ciclístico dos Falcões - Fagundes Varela</title>
+<style>
+  :root {
+    --bg: #ece2cd;
+    --card: #fbf6ec;
+    --ink: #2c2416;
+    --ink-soft: #5b5138;
+    --olive: #4c5a34;
+    --olive-dark: #394327;
+    --brick: #a4451f;
+    --brick-dark: #7c3417;
+    --border: #d9cdae;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: var(--olive-dark);
+  }
+  header img { height: 42px; width: 42px; border-radius: 50%; background: #fbf6ec; padding: 4px; }
+  header span {
+    font-family: Arial, sans-serif;
+    color: #f6efdd;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+  }
+  .hero {
+    position: relative;
+    min-height: 380px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.35) saturate(1.15) contrast(1.05) brightness(0.85);
+  }
+  .hero-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(44,36,22,0.1) 0%, rgba(44,36,22,0.35) 45%, rgba(28,22,12,0.92) 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 24px 22px;
+    color: #f6efdd;
+    text-align: center;
+  }
+  .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12.5px;
+    color: #e3d9ba;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 7vw, 42px);
+    margin: 0 0 8px;
+    font-weight: 700;
+    line-height: 1.12;
+  }
+  .hero .place { font-size: 16px; color: #e3d9ba; margin: 0; font-family: Arial, sans-serif; }
+  .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
+  .fact {
+    background: rgba(246,239,221,0.12);
+    border: 1px solid rgba(246,239,221,0.3);
+    border-radius: 10px;
+    padding: 9px 15px;
+    font-size: 13.5px;
+    font-family: Arial, sans-serif;
+  }
+  .fact b { display: block; font-size: 15px; margin-top: 2px; }
+  main { max-width: 680px; margin: 0 auto; padding: 0 18px 50px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 26px 22px; margin-top: 22px; }
+  .card h2 { margin: 0 0 12px; font-size: 21px; color: var(--brick); font-weight: 700; }
+  .card p { margin: 0 0 10px; font-size: 15.5px; }
+  .card p:last-child { margin-bottom: 0; }
+  ul.prog { list-style: none; margin: 0; padding: 0; }
+  ul.prog li { display: flex; gap: 14px; padding: 12px 0; border-top: 1px dashed var(--border); font-size: 15px; }
+  ul.prog li:first-child { border-top: none; }
+  ul.prog .time { font-family: Arial, sans-serif; font-weight: 700; color: var(--brick); min-width: 58px; flex-shrink: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .chip { font-family: Arial, sans-serif; font-size: 13px; background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; color: var(--ink-soft); }
+  .cta {
+    display: block;
+    text-align: center;
+    background: var(--brick);
+    color: #fbf6ec;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 17px;
+    border-radius: 8px;
+    margin-top: 26px;
+  }
+  .cta-sub { text-align: center; font-family: Arial, sans-serif; font-size: 12.5px; color: var(--ink-soft); margin-top: 10px; }
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 14px; }
+  .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); background: var(--bg); }
+  footer { text-align: center; font-family: Arial, sans-serif; font-size: 12.5px; color: var(--ink-soft); padding: 30px 18px 20px; }
+  footer .fname { font-weight: 700; color: var(--ink); display: block; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="img/logo.jpg" alt="Logo Falcões Ciclismo Fagundes Varela" />
+  <span>FALCÕES CICLISMO FAGUNDES VARELA</span>
+</header>
+
+<div class="hero">
+  <img src="img/banner.jpg" alt="Largada do passeio ciclístico saindo pelo pórtico de Fagundes Varela" />
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <div class="kicker">Cicloturismo &middot; Parte da Bella Festa 2026</div>
+    <h1>4° Passeio Ciclístico dos Falcões</h1>
+    <p class="place">Estradas e trilhas do interior de Fagundes Varela &middot; RS</p>
+    <div class="facts">
+      <div class="fact">Data<b>06/12/2026</b></div>
+      <div class="fact">Horário<b>7h às 17h</b></div>
+      <div class="fact">Trajetos<b>20 km e 50 km</b></div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <div class="card">
+    <h2>Sobre o passeio</h2>
+    <p>O 4° Passeio Ciclístico dos Falcões é um evento de cicloturismo pelas estradas e trilhas do interior de Fagundes Varela, passando por diversas localidades do município até a sede. Reúne ciclistas da região e de outras cidades num domingo de confraternização sobre duas rodas.</p>
+    <div class="chips">
+      <span class="chip">Público estimado: 200 ciclistas</span>
+      <span class="chip">Promoção: Falcões Ciclismo Fagundes Varela (FCF)</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Programação</h2>
+    <ul class="prog">
+      <li><span class="time">7h</span><span>Recepção dos ciclistas: inscrições, café da manhã e sorteio de brindes</span></li>
+      <li><span class="time">8h30</span><span>Largada para o passeio pelas estradas do interior, trajetos de 20 km e 50 km</span></li>
+      <li><span class="time">17h</span><span>Encerramento do evento</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>O que está incluso</h2>
+    <div class="chips">
+      <span class="chip">Café da manhã</span>
+      <span class="chip">Medalha</span>
+      <span class="chip">Pontos de apoio / hidratação</span>
+      <span class="chip">Numeração do ciclista</span>
+      <span class="chip">Sorteio de brindes</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Fotos dos passeios anteriores</h2>
+    <p>Confira alguns momentos das edições passadas.</p>
+    <div class="gallery">
+      <img src="img/gallery/01.jpg" alt="Foto de passeio anterior" />
+      <img src="img/gallery/02.jpg" alt="Foto de passeio anterior" />
+      <img src="img/gallery/03.jpg" alt="Foto de passeio anterior" />
+      <img src="img/gallery/04.jpg" alt="Foto de passeio anterior" />
+      <img src="img/gallery/05.jpg" alt="Foto de passeio anterior" />
+      <img src="img/gallery/06.jpg" alt="Foto de passeio anterior" />
+    </div>
+  </div>
+
+  <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSe7fSpj3VyA5Hq9D83iezb69KsoHjzPnfjbDhNTz5Xomr-SWg/viewform?usp=header" target="_blank" rel="noopener">Fazer minha inscrição →</a>
+  <p class="cta-sub">Você será redirecionado para o formulário oficial de inscrição (valor e chave Pix estão lá)</p>
+
+  <footer>
+    <span class="fname">Falcões Ciclismo Fagundes Varela (FCF)</span>
+    Rua Luiz Antônio Fascenda, 207 &middot; Fagundes Varela/RS<br/>
+    falcoesfv@gmail.com &middot; (54) 3445-1193
+  </footer>
+
+</main>
+
+</body>
+</html>

@@ -119,6 +119,23 @@
     margin-top: 26px;
   }
   .cta-sub { text-align: center; font-family: Arial, sans-serif; font-size: 12.5px; color: var(--ink-soft); margin-top: 10px; }
+  .bella-banner {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+  }
+  .bella-banner img { max-width: 260px; width: 100%; height: auto; display: block; margin: 0 auto; }
+  .bella-banner .bella-dates {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 6px;
+  }
+  .support { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; text-align: center; margin-top: 26px; }
+  .support .label { font-family: Arial, sans-serif; font-weight: 700; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brick); margin-bottom: 12px; }
+  .support img { height: 64px; width: auto; object-fit: contain; margin-bottom: 8px; }
+  .support .caption { font-family: Arial, sans-serif; font-size: 13px; color: var(--ink-soft); line-height: 1.3; }
   .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 14px; }
   .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); background: var(--bg); }
   footer { text-align: center; font-family: Arial, sans-serif; font-size: 12.5px; color: var(--ink-soft); padding: 30px 18px 20px; }
@@ -132,6 +149,13 @@
   <span>FALCÕES CICLISMO FAGUNDES VARELA</span>
 </header>
 
+<div class="card" style="margin:18px auto 0; max-width:680px;">
+  <a class="bella-banner" href="https://www.instagram.com/bellafestafv/" target="_blank" rel="noopener">
+    <img src="img/bella-festa-logo.png" alt="Bella Festa 26" />
+    <div class="bella-dates">3 a 6 de Dezembro de 2026 &ndash; Fagundes Varela/RS</div>
+  </a>
+</div>
+
 <div class="hero">
   <img src="img/banner.jpg" alt="Largada do passeio ciclístico saindo pelo pórtico de Fagundes Varela" />
   <div class="hero-shade"></div>
@@ -141,8 +165,9 @@
     <p class="place">Estradas e trilhas do interior de Fagundes Varela &middot; RS</p>
     <div class="facts">
       <div class="fact">Data<b>06/12/2026</b></div>
-      <div class="fact">Horário<b>7h às 17h</b></div>
+      <div class="fact">Horário<b>A partir das 7h</b></div>
       <div class="fact">Trajetos<b>20 km e 50 km</b></div>
+      <div class="fact">Local<b>Parque de Eventos da Bella Festa</b></div>
     </div>
   </div>
 </div>
@@ -152,18 +177,14 @@
   <div class="card">
     <h2>Sobre o passeio</h2>
     <p>O 4° Passeio Ciclístico dos Falcões é um evento de cicloturismo pelas estradas e trilhas do interior de Fagundes Varela, passando por diversas localidades do município até a sede. Reúne ciclistas da região e de outras cidades num domingo de confraternização sobre duas rodas.</p>
-    <div class="chips">
-      <span class="chip">Público estimado: 200 ciclistas</span>
-      <span class="chip">Promoção: Falcões Ciclismo Fagundes Varela (FCF)</span>
-    </div>
   </div>
 
   <div class="card">
     <h2>Programação</h2>
     <ul class="prog">
-      <li><span class="time">7h</span><span>Recepção dos ciclistas: inscrições, café da manhã e sorteio de brindes</span></li>
-      <li><span class="time">8h30</span><span>Largada para o passeio pelas estradas do interior, trajetos de 20 km e 50 km</span></li>
-      <li><span class="time">17h</span><span>Encerramento do evento</span></li>
+      <li><span class="time">7h</span><span>Recepção dos ciclistas: inscrições, café da manhã</span></li>
+      <li><span class="time">8h30</span><span>Largada para o passeio pelas estradas do interior</span></li>
+      <li><span class="time">—</span><span>Chegada no Parque de Eventos da Bella Festa, com almoço por adesão na praça de alimentação</span></li>
     </ul>
   </div>
 
@@ -174,7 +195,8 @@
       <span class="chip">Medalha</span>
       <span class="chip">Pontos de apoio / hidratação</span>
       <span class="chip">Numeração do ciclista</span>
-      <span class="chip">Sorteio de brindes</span>
+      <span class="chip">Troféus para os KOMs</span>
+      <span class="chip">Chuveiros e vestiários</span>
     </div>
   </div>
 
@@ -194,10 +216,21 @@
   <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSe7fSpj3VyA5Hq9D83iezb69KsoHjzPnfjbDhNTz5Xomr-SWg/viewform?usp=header" target="_blank" rel="noopener">Fazer minha inscrição →</a>
   <p class="cta-sub">Você será redirecionado para o formulário oficial de inscrição (valor e chave Pix estão lá)</p>
 
+  <div class="support">
+    <div>
+      <div class="label">Promoção:</div>
+      <img src="img/logo.jpg" alt="Logo Falcões Ciclismo Fagundes Varela" />
+      <div class="caption">Falcões Ciclismo Fagundes Varela</div>
+    </div>
+    <div>
+      <div class="label">Apoio:</div>
+      <img src="img/brasao-fagundes.jpg" alt="Brasão do Município de Fagundes Varela" />
+      <div class="caption">Município de Fagundes Varela</div>
+    </div>
+  </div>
+
   <footer>
-    <span class="fname">Falcões Ciclismo Fagundes Varela (FCF)</span>
-    Rua Luiz Antônio Fascenda, 207 &middot; Fagundes Varela/RS<br/>
-    falcoesfv@gmail.com &middot; (54) 3445-1193
+    falcoesfv@gmail.com
   </footer>
 
 </main>

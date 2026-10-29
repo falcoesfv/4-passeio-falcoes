@@ -4,40 +4,54 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>4° Passeio Ciclístico dos Falcões - Fagundes Varela</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #ece2cd;
-    --card: #fbf6ec;
-    --ink: #2c2416;
-    --ink-soft: #5b5138;
-    --olive: #4c5a34;
-    --olive-dark: #394327;
-    --brick: #a4451f;
-    --brick-dark: #7c3417;
-    --border: #d9cdae;
+    --bg: #f3f4f7;
+    --card: #ffffff;
+    --ink: #121622;
+    --ink-soft: #5b6072;
+    --navy: #0e1b3d;
+    --navy-light: #1c2d5c;
+    --black: #0a0a0c;
+    --border: #e1e3ea;
+    --bella-bg: #f6eef2;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
     background: var(--bg);
     color: var(--ink);
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     line-height: 1.6;
   }
   header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 12px;
     padding: 14px 20px;
-    background: var(--olive-dark);
+    background: var(--navy);
   }
-  header img { height: 42px; width: 42px; border-radius: 50%; background: #fbf6ec; padding: 4px; }
+  header img { height: 40px; width: 40px; object-fit: contain; }
   header span {
-    font-family: Arial, sans-serif;
-    color: #f6efdd;
-    font-weight: 700;
+    color: #ffffff;
+    font-weight: 800;
     font-size: 14px;
     letter-spacing: 0.04em;
+  }
+  .bella-banner {
+    display: block;
+    background: var(--bella-bg);
+  }
+  .bella-banner img {
+    display: block;
+    width: 100%;
+    max-height: 190px;
+    object-fit: contain;
+    margin: 0 auto;
+    padding: 10px 0;
   }
   .hero {
     position: relative;
@@ -52,12 +66,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: sepia(0.35) saturate(1.15) contrast(1.05) brightness(0.85);
+    filter: grayscale(0.25) contrast(1.08) brightness(0.8);
   }
   .hero-shade {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(44,36,22,0.1) 0%, rgba(44,36,22,0.35) 45%, rgba(28,22,12,0.92) 100%);
+    background: linear-gradient(180deg, rgba(10,12,20,0.15) 0%, rgba(10,12,20,0.45) 45%, rgba(8,10,18,0.94) 100%);
   }
   .hero-content {
     position: relative;
@@ -66,95 +80,89 @@
     max-width: 680px;
     margin: 0 auto;
     padding: 24px 22px;
-    color: #f6efdd;
+    color: #ffffff;
     text-align: center;
   }
   .kicker {
     text-transform: uppercase;
     letter-spacing: 0.14em;
     font-size: 12.5px;
-    color: #e3d9ba;
-    font-family: Arial, sans-serif;
+    font-weight: 700;
+    color: #cfd4e6;
     margin-bottom: 10px;
   }
   .hero h1 {
-    font-size: clamp(28px, 7vw, 42px);
+    font-size: clamp(26px, 7vw, 40px);
     margin: 0 0 8px;
-    font-weight: 700;
-    line-height: 1.12;
+    font-weight: 800;
+    line-height: 1.14;
+    letter-spacing: -0.01em;
   }
-  .hero .place { font-size: 16px; color: #e3d9ba; margin: 0; font-family: Arial, sans-serif; }
+  .hero .place { font-size: 15.5px; color: #cfd4e6; margin: 0; font-weight: 500; }
   .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
   .fact {
-    background: rgba(246,239,221,0.12);
-    border: 1px solid rgba(246,239,221,0.3);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.22);
     border-radius: 10px;
     padding: 9px 15px;
-    font-size: 13.5px;
-    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #e4e7f2;
   }
-  .fact b { display: block; font-size: 15px; margin-top: 2px; }
+  .fact b { display: block; font-size: 15px; margin-top: 2px; font-weight: 700; color: #fff; }
   main { max-width: 680px; margin: 0 auto; padding: 0 18px 50px; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 26px 22px; margin-top: 22px; }
-  .card h2 { margin: 0 0 12px; font-size: 21px; color: var(--brick); font-weight: 700; }
-  .card p { margin: 0 0 10px; font-size: 15.5px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 26px 22px; margin-top: 22px; }
+  .card h2 { margin: 0 0 12px; font-size: 20px; color: var(--navy); font-weight: 800; }
+  .card p { margin: 0 0 10px; font-size: 15px; color: var(--ink); }
   .card p:last-child { margin-bottom: 0; }
   ul.prog { list-style: none; margin: 0; padding: 0; }
   ul.prog li { display: flex; gap: 14px; padding: 12px 0; border-top: 1px dashed var(--border); font-size: 15px; }
   ul.prog li:first-child { border-top: none; }
-  ul.prog .time { font-family: Arial, sans-serif; font-weight: 700; color: var(--brick); min-width: 58px; flex-shrink: 0; }
+  ul.prog .time { font-weight: 800; color: var(--navy); min-width: 58px; flex-shrink: 0; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-  .chip { font-family: Arial, sans-serif; font-size: 13px; background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; color: var(--ink-soft); }
+  .chip { font-size: 13px; font-weight: 600; background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; color: var(--ink-soft); }
   .cta {
     display: block;
     text-align: center;
-    background: var(--brick);
-    color: #fbf6ec;
-    font-family: Arial, sans-serif;
-    font-weight: 700;
+    background: var(--black);
+    color: #ffffff;
+    font-weight: 800;
     font-size: 17px;
     text-decoration: none;
     padding: 17px;
     border-radius: 8px;
     margin-top: 26px;
+    letter-spacing: 0.01em;
   }
-  .cta-sub { text-align: center; font-family: Arial, sans-serif; font-size: 12.5px; color: var(--ink-soft); margin-top: 10px; }
-  .bella-banner {
-    display: block;
+  .cta:active { background: var(--navy); }
+  .cta-sub { text-align: center; font-size: 12.5px; color: var(--ink-soft); margin-top: 10px; }
+  .insta-line {
     text-align: center;
-    text-decoration: none;
-    color: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-top: 18px;
   }
-  .bella-banner img { max-width: 260px; width: 100%; height: auto; display: block; margin: 0 auto; }
-  .bella-banner .bella-dates {
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    color: var(--ink-soft);
-    margin-top: 6px;
-  }
+  .insta-line a { color: var(--navy-light); text-decoration: none; font-weight: 800; }
   .support { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; text-align: center; margin-top: 26px; }
-  .support .label { font-family: Arial, sans-serif; font-weight: 700; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brick); margin-bottom: 12px; }
+  .support .label { font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--navy); margin-bottom: 12px; }
   .support img { height: 64px; width: auto; object-fit: contain; margin-bottom: 8px; }
-  .support .caption { font-family: Arial, sans-serif; font-size: 13px; color: var(--ink-soft); line-height: 1.3; }
+  .support .caption { font-size: 13px; font-weight: 500; color: var(--ink-soft); line-height: 1.3; }
   .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 14px; }
   .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); background: var(--bg); }
-  footer { text-align: center; font-family: Arial, sans-serif; font-size: 12.5px; color: var(--ink-soft); padding: 30px 18px 20px; }
-  footer .fname { font-weight: 700; color: var(--ink); display: block; margin-bottom: 4px; }
+  footer { text-align: center; font-size: 12.5px; color: var(--ink-soft); padding: 30px 18px 20px; }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="img/logo.jpg" alt="Logo Falcões Ciclismo Fagundes Varela" />
+  <img src="img/logo-falcoes.png" alt="Logo Falcões Ciclismo Fagundes Varela" />
   <span>FALCÕES CICLISMO FAGUNDES VARELA</span>
 </header>
 
-<div class="card" style="margin:18px auto 0; max-width:680px;">
-  <a class="bella-banner" href="https://www.instagram.com/bellafestafv/" target="_blank" rel="noopener">
-    <img src="img/bella-festa-logo.png" alt="Bella Festa 26" />
-    <div class="bella-dates">3 a 6 de Dezembro de 2026 &ndash; Fagundes Varela/RS</div>
-  </a>
-</div>
+<a class="bella-banner" href="https://www.instagram.com/bellafestafv/" target="_blank" rel="noopener">
+  <img src="img/bella-festa-logo.png" alt="Bella Festa 26 - 3 a 6 de dezembro - Fagundes Varela, RS" />
+</a>
 
 <div class="hero">
   <img src="img/banner.jpg" alt="Largada do passeio ciclístico saindo pelo pórtico de Fagundes Varela" />
@@ -216,15 +224,17 @@
   <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSe7fSpj3VyA5Hq9D83iezb69KsoHjzPnfjbDhNTz5Xomr-SWg/viewform?usp=header" target="_blank" rel="noopener">Fazer minha inscrição →</a>
   <p class="cta-sub">Você será redirecionado para o formulário oficial de inscrição (valor e chave Pix estão lá)</p>
 
+  <p class="insta-line">Para mais informações sobre o passeio, siga nosso Instagram <a href="https://www.instagram.com/falcoesciclismo" target="_blank" rel="noopener">@falcoesciclismo</a></p>
+
   <div class="support">
     <div>
       <div class="label">Promoção:</div>
-      <img src="img/logo.jpg" alt="Logo Falcões Ciclismo Fagundes Varela" />
+      <img src="img/logo-falcoes.png" alt="Logo Falcões Ciclismo Fagundes Varela" />
       <div class="caption">Falcões Ciclismo Fagundes Varela</div>
     </div>
     <div>
       <div class="label">Apoio:</div>
-      <img src="img/brasao-fagundes.jpg" alt="Brasão do Município de Fagundes Varela" />
+      <img src="img/brasao-fagundes.png" alt="Brasão do Município de Fagundes Varela" />
       <div class="caption">Município de Fagundes Varela</div>
     </div>
   </div>

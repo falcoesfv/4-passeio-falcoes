@@ -13,8 +13,10 @@
     --card: #ffffff;
     --ink: #121622;
     --ink-soft: #5b6072;
-    --navy: #7a1836;
-    --navy-light: #b23a63;
+    --blue: #0058a0;
+    --blue-dark: #003068;
+    --pink: #e00060;
+    --yellow: #f8e000;
     --black: #0a0a0c;
     --border: #e1e3ea;
     --bella-bg: #f6eef2;
@@ -32,7 +34,8 @@
     align-items: center;
     gap: 12px;
     padding: 14px 20px;
-    background: var(--navy);
+    background: var(--blue-dark);
+    border-bottom: 4px solid var(--pink);
   }
   header img { height: 40px; width: 40px; object-fit: contain; }
   header span {
@@ -109,22 +112,24 @@
     font-weight: 500;
     color: #e4e7f2;
   }
-  .fact b { display: block; font-size: 15px; margin-top: 2px; font-weight: 700; color: #fff; }
+  .fact b { display: block; font-size: 15px; margin-top: 2px; font-weight: 800; color: var(--yellow); }
   main { max-width: 680px; margin: 0 auto; padding: 0 18px 50px; }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 26px 22px; margin-top: 22px; }
-  .card h2 { margin: 0 0 12px; font-size: 20px; color: var(--navy); font-weight: 800; }
+  .card h2 { margin: 0 0 12px; font-size: 20px; color: var(--blue); font-weight: 800; }
   .card p { margin: 0 0 10px; font-size: 15px; color: var(--ink); }
   .card p:last-child { margin-bottom: 0; }
   ul.prog { list-style: none; margin: 0; padding: 0; }
   ul.prog li { display: flex; gap: 14px; padding: 12px 0; border-top: 1px dashed var(--border); font-size: 15px; }
   ul.prog li:first-child { border-top: none; }
-  ul.prog .time { font-weight: 800; color: var(--navy); min-width: 58px; flex-shrink: 0; }
+  ul.prog .time { font-weight: 800; color: var(--pink); min-width: 58px; flex-shrink: 0; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-  .chip { font-size: 13px; font-weight: 600; background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; color: var(--ink-soft); }
+  .chip { font-size: 13px; font-weight: 700; background: var(--blue); border-radius: 999px; padding: 7px 14px 7px 12px; color: #ffffff; display: inline-flex; align-items: center; gap: 7px; }
+  .chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); flex-shrink: 0; }
   .cta {
     display: block;
     text-align: center;
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+    border-bottom: 4px solid var(--pink);
     color: #ffffff;
     font-weight: 800;
     font-size: 17px;
@@ -134,7 +139,7 @@
     margin-top: 26px;
     letter-spacing: 0.01em;
   }
-  .cta:active { background: var(--navy); }
+  .cta:active { background: var(--blue-dark); }
   .cta-sub { text-align: center; font-size: 12.5px; color: var(--ink-soft); margin-top: 10px; }
   .insta-line {
     text-align: center;
@@ -143,9 +148,9 @@
     color: var(--ink);
     margin-top: 18px;
   }
-  .insta-line a { color: var(--navy-light); text-decoration: none; font-weight: 800; }
+  .insta-line a { color: var(--pink); text-decoration: none; font-weight: 800; }
   .support { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; text-align: center; margin-top: 26px; }
-  .support .label { font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--navy); margin-bottom: 12px; }
+  .support .label { font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--blue); margin-bottom: 12px; }
   .support img { height: 64px; width: auto; object-fit: contain; margin-bottom: 8px; }
   .support .caption { font-size: 13px; font-weight: 500; color: var(--ink-soft); line-height: 1.3; }
   .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 14px; }
@@ -174,8 +179,9 @@
     <div class="facts">
       <div class="fact">Data<b>06/12/2026</b></div>
       <div class="fact">Horário<b>A partir das 7h</b></div>
-      <div class="fact">Trajetos<b>35 km e 45 km</b></div>
-      <div class="fact">Local<b>Parque de Eventos da Bella Festa</b></div>
+      <div class="fact">Trajetos<b>35 km e 55 km</b></div>
+      <div class="fact">Largada<b>Ginásio Municipal</b></div>
+      <div class="fact">Chegada<b>Parque de Eventos da Bella Festa</b></div>
     </div>
   </div>
 </div>
@@ -190,20 +196,22 @@
   <div class="card">
     <h2>Programação</h2>
     <ul class="prog">
-      <li><span class="time">7h</span><span>Recepção dos ciclistas: inscrições, café da manhã</span></li>
-      <li><span class="time">8h30</span><span>Largada para o passeio pelas estradas do interior</span></li>
-      <li><span class="time">—</span><span>Chegada no Parque de Eventos da Bella Festa, com almoço por adesão na praça de alimentação</span></li>
+      <li><span class="time">7h</span><span>Recepção dos ciclistas, café da manhã e inscrições</span></li>
+      <li><span class="time">8h</span><span>Largada no Ginásio Municipal, junto à Bella Festa</span></li>
+      <li><span class="time">—</span><span>Chegada no Parque de Eventos da Bella Festa, com almoço por conta do ciclista na praça de alimentação</span></li>
     </ul>
   </div>
 
   <div class="card">
     <h2>O que está incluso</h2>
     <div class="chips">
+      <span class="chip">Plaquinha de identificação</span>
       <span class="chip">Café da manhã</span>
-      <span class="chip">Medalha</span>
-      <span class="chip">Pontos de apoio / hidratação</span>
-      <span class="chip">Numeração do ciclista</span>
-      <span class="chip">Troféus para os KOMs</span>
+      <span class="chip">Trajeto sinalizado</span>
+      <span class="chip">Pontos fotográficos</span>
+      <span class="chip">Troféus para os KOMs masculino e feminino</span>
+      <span class="chip">Pontos de apoio e hidratação</span>
+      <span class="chip">Medalha de participação</span>
       <span class="chip">Chuveiros e vestiários</span>
     </div>
   </div>
@@ -224,7 +232,7 @@
   <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSe7fSpj3VyA5Hq9D83iezb69KsoHjzPnfjbDhNTz5Xomr-SWg/viewform?usp=header" target="_blank" rel="noopener">Fazer minha inscrição →</a>
   <p class="cta-sub">Você será redirecionado para o formulário oficial de inscrição (valor e chave Pix estão lá)</p>
 
-  <p class="insta-line">Para mais informações sobre o passeio, siga nosso Instagram <a href="https://www.instagram.com/falcoesciclismo" target="_blank" rel="noopener">@falcoesciclismo</a></p>
+  <p class="insta-line">Para mais informações sobre o passeio, siga nosso Instagram <a href="https://www.instagram.com/falcoesfv" target="_blank" rel="noopener">@falcoesfv</a></p>
 
   <div class="support">
     <div>
